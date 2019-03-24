@@ -152,7 +152,7 @@ def external_callback(state, action):
         )
 
 
-def init_state_mgr(gconf, gdata, callbacks):
+def init_state_mgr(gconf, gdata, callbacks, loop):
     global com_obj, conf, data
 
     conf, data = (gconf, gdata)
@@ -160,7 +160,8 @@ def init_state_mgr(gconf, gdata, callbacks):
     states.init_states(
         get_hosts(conf, data),
         callbacks + [external_callback],
-        conf.ap_password
+        conf.ap_password,
+        loop
     )
     com_obj = Comitup()
 

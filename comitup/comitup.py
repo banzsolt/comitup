@@ -108,6 +108,7 @@ def main():
     webmgr.init_webmgr(conf.web_service)
     iptmgr.init_iptmgr()
 
+    loop = MainLoop()
     statemgr.init_state_mgr(
                 conf, data,
                 [
@@ -115,9 +116,9 @@ def main():
                     iptmgr.state_callback,
                     cdns.state_callback,
                 ],
+                loop
              )
 
-    loop = MainLoop()
     loop.run()
 
 

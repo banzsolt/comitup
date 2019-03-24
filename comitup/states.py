@@ -334,10 +334,10 @@ def is_hotspot_current(connection):
     return hs_hash == cf_hash
 
 
-def init_states(hosts, callbacks, hotspot_pw):
+def init_states(hosts, callbacks, hotspot_pw, loop):
     global hotspot_name
 
-    nmmon.init_nmmon()
+    nmmon.init_nmmon(loop)
     set_hosts(*hosts)
 
     for callback in callbacks:
