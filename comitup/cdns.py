@@ -12,7 +12,8 @@ import signal
 import subprocess
 import time
 
-from comitup import modemgr
+#from comitup import modemgr
+import modemgr
 
 log = logging.getLogger('comitup')
 

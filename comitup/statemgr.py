@@ -30,9 +30,12 @@ import time                                   # noqa
 from dbus.mainloop.glib import DBusGMainLoop  # noqa
 DBusGMainLoop(set_as_default=True)
 
-from comitup import states                                 # noqa
-from comitup import nm                                     # noqa
-from comitup import modemgr                                # noqa
+#from comitup import states                                 # noqa
+import states
+#from comitup import nm                                     # noqa
+import nm
+#from comitup import modemgr                                # noqa
+import modemgr
 
 comitup_path = "/com/github/davesteele/comitup"
 

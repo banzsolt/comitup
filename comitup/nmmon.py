@@ -27,8 +27,10 @@ if __name__ == '__main__':
     parentdir = '/'.join(fullpath.split('/')[:-2])
     sys.path.insert(0, parentdir)
 
-from comitup import nm       # noqa
-from comitup import modemgr  # noqa
+#from comitup import nm       # noqa
+import nm
+#from comitup import modemgr  # noqa
+import modemgr
 
 log = logging.getLogger('comitup')
 

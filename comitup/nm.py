@@ -27,7 +27,8 @@ if __name__ == '__main__':
     parentdir = '/'.join(fullpath.split('/')[:-2])
     sys.path.insert(0, parentdir)
 
-from comitup import iwscan  # noqa
+#from comitup import iwscan  # noqa
+import iwscan
 
 
 pp = pprint.PrettyPrinter(indent=4)

@@ -20,11 +20,16 @@ from gi.repository.GLib import MainLoop
 from dbus.mainloop.glib import DBusGMainLoop
 DBusGMainLoop(set_as_default=True)
 
-from comitup import cdns         # noqa
-from comitup import iptmgr       # noqa
-from comitup import statemgr     # noqa
-from comitup import webmgr       # noqa
-from comitup import wificheck    # noqa
+#from comitup import cdns         # noqa
+import cdns
+#from comitup import iptmgr       # noqa
+import iptmgr
+#from comitup import statemgr     # noqa
+import statemgr
+#from comitup import webmgr       # noqa
+import webmgr
+#from comitup import wificheck    # noqa
+import wificheck
 
 PERSIST_PATH = "/var/lib/comitup/comitup.json"
 CONF_PATH = "/etc/comitup.conf"

@@ -14,7 +14,8 @@
 import dbus
 import socket
 import logging
-from comitup import nm
+#from comitup import nm
+import nm
 import subprocess
 
 log = logging.getLogger('comitup')

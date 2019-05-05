@@ -25,10 +25,14 @@ if __name__ == '__main__':
     from dbus.mainloop.glib import DBusGMainLoop
     DBusGMainLoop(set_as_default=True)
 
-from comitup import nmmon    # noqa
-from comitup import nm       # noqa
-from comitup import mdns     # noqa
-from comitup import modemgr  # noqa
+#from comitup import nmmon    # noqa
+import nmmon
+#from comitup import nm       # noqa
+import nm
+#from comitup import mdns     # noqa
+import mdns
+#from comitup import modemgr  # noqa
+import modemgr
 
 
 log = logging.getLogger('comitup')
