@@ -59,10 +59,15 @@ def create_app(log):
     @app.route("/")
     def index():
         points = ciu_client.ciu_points()
+        known_ssids = []
+        the_networks = []
         for point in points:
             point['ssid_encoded'] = urllib.parse.quote(point['ssid'])
+            if point['ssid'] not in known_ssids:
+                known_ssids.append(point['ssid'])
+                the_networks.append(point)
         log.info("index.html - {} points".format(len(points)))
-        return render_template("index.html", points=points)
+        return render_template("index.html", points=the_networks)
 
     @app.route('/js/<path:path>')
     def send_js(path):
